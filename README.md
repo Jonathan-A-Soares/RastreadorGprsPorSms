@@ -6,7 +6,7 @@
 > ### Foi necesario modificar a blibioteca Sim800-master.
 
 * Projeto Conclui em Mandar Sms para numero Do modulo sim800l, E modulo Retorna Sms Com localidade do veiculo Em Latitude Longitude.
-* Comando no Momento Esta Location (nao importa letra maiuscula o progama transfoma tudo em letra maiuscula para diminuir chanse de erro)
+* Comando no Momento Esta "Location" (nao importa letra maiuscula o progama transfoma tudo em letra maiuscula para diminuir chanse de erro)
 ### Pinagem
 
 ### Sim800L
