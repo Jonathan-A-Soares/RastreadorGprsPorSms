@@ -206,7 +206,88 @@ bool Sim800l::sendSms(char* number,float text){
       return false;
     }
 }
+bool Sim800l::sendtextSms(char* number,String text){
 
+    SIM.print (F("AT+CMGF=1\r")); //set sms to text mode  
+    _buffer=_readSerial();
+    SIM.print (F("AT+CMGS=\""));  // command to send sms
+    SIM.print (number);           
+    SIM.print(F("\"\r"));       
+    _buffer=_readSerial(); 
+    SIM.print (text);
+    SIM.print ("\r"); 
+	//change delay 100 to readserial	
+    _buffer=_readSerial();
+    SIM.print((char)26);
+    _buffer=_readSerial();
+    //expect CMGS:xxx   , where xxx is a number,for the sending sms.
+    if (((_buffer.indexOf("CMGS") ) != -1 ) ){
+      return true;
+    }
+    else {
+      return false;
+    }
+}
+bool Sim800l::sendLinkSms(char *number, float lat, float lon)
+{
+
+  SIM.print(F("AT+CMGF=1\r")); //set sms to text mode
+  _buffer = _readSerial();
+  SIM.print(F("AT+CMGS=\"")); // command to send sms
+  SIM.print(number);
+  SIM.print(F("\"\r"));
+  _buffer = _readSerial();
+  SIM.print("link:");
+  SIM.print("https://www.google.com/maps/place/");
+  SIM.print(lat,6);
+  SIM.print(",");
+  SIM.print(lon,6);
+
+  SIM.print("\r");
+  //change delay 100 to readserial
+  _buffer = _readSerial();
+  SIM.print((char)26);
+  _buffer = _readSerial();
+  //expect CMGS:xxx   , where xxx is a number,for the sending sms.
+  if (((_buffer.indexOf("CMGS")) != -1))
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
+bool Sim800l::sendLocationSms(char *number, float lat, float lon)
+{
+
+  SIM.print(F("AT+CMGF=1\r")); //set sms to text mode
+  _buffer = _readSerial();
+  SIM.print(F("AT+CMGS=\"")); // command to send sms
+  SIM.print(number);
+  SIM.print(F("\"\r"));
+  _buffer = _readSerial();
+
+  SIM.print("Latitude:");
+  SIM.println(lat, 6);
+  SIM.print("Longitude:");
+  SIM.print(lon, 6);
+
+  SIM.print("\r");
+  //change delay 100 to readserial
+  _buffer = _readSerial();
+  SIM.print((char)26);
+  _buffer = _readSerial();
+  //expect CMGS:xxx   , where xxx is a number,for the sending sms.
+  if (((_buffer.indexOf("CMGS")) != -1))
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
 
 String Sim800l::getNumberSms(uint8_t index){
   _buffer=readSms(index);
