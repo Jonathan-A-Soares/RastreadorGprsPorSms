@@ -6,7 +6,7 @@
 > ### Foi necesario modificar a blibioteca sim800-master.
 
 * Projeto Conclui em Mandar Sms para numero Do modulo sim800l, E modulo Retorna Sms Com localidade do veiculo Em Latitude Longitude.
-* ### Pinagem
+### Pinagem
 
 ### Sim800L
 | Sim800L | Arduino                   |
