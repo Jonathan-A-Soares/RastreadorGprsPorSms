@@ -17,7 +17,8 @@
 | Rx      |            D9             |
 | Reset   |            D7             |
 | Gnd     |            Gnd            |
-__Atenção o modulo Gprs tem que ser Alimentado com ou mais de 3.7v é Menos de 4.2v__ | __Corrente de pico pode Chegar a 2A__
+
+__Atenção o modulo Gprs tem que ser Alimentado com ou mais de 3.7v é Menos de 4.2v Corrente de pico pode Chegar a 2A__
 ### Gps Neo-6M
 | Gps Neo-6M | Arduino        |
 |------------|----------------|
