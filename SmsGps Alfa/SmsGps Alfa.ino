@@ -66,7 +66,7 @@ void ResSms() {
 
       numberSms.toCharArray(number, 20);
 
-      if (textSms.indexOf("KDTU") != -1)
+      if (textSms.indexOf("location") != -1)
       {
         Serial.println("Opçao 1");
 
