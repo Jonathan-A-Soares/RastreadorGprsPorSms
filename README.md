@@ -6,6 +6,7 @@
 > ### Foi necesario modificar a blibioteca Sim800-master.
 
 * Projeto Conclui em Mandar Sms para numero Do modulo sim800l, E modulo Retorna Sms Com localidade do veiculo Em Latitude Longitude.
+* Comando no Momento Esta Location (nao importa letra maiuscula o progama transfoma tudo em letra maiuscula para diminuir chanse de erro)
 ### Pinagem
 
 ### Sim800L
@@ -27,5 +28,8 @@ __Atenção o modulo Gprs tem que ser Alimentado com ou mais de 3.7v é Menos de
 
 #### Blibioteca Modificada 
 [Sim800-master](https://github.com/Jonathan-A-Soares/RastreadorGprsPorSms/tree/main/Sim800l-master)
-#### Blibioteca Original 
+#### Blibioteca Originais
 [Sim800-master](https://github.com/cristiansteib/Sim800l)
+[Wire](https://www.arduino.cc/en/reference/wire)
+[SoftwareSerial](https://www.arduino.cc/en/Reference/softwareSerial)
+[TinyGPS++](https://github.com/mikalhart/TinyGPSPlus/releases/tag/v1.0.2b)
