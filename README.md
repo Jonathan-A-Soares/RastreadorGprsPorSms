@@ -27,9 +27,9 @@ __Atenção o modulo Gprs tem que ser Alimentado com ou mais de 3.7v é Menos de
 | Gnd        |           Gnd  |
 
 #### Blibioteca Modificada 
-[Sim800-master](https://github.com/Jonathan-A-Soares/RastreadorGprsPorSms/tree/main/Sim800l-master)
+- [Sim800-master](https://github.com/Jonathan-A-Soares/RastreadorGprsPorSms/tree/main/Sim800l-master)
 #### Blibioteca Originais
-[Sim800-master](https://github.com/cristiansteib/Sim800l)
-[Wire](https://www.arduino.cc/en/reference/wire)
-[SoftwareSerial](https://www.arduino.cc/en/Reference/softwareSerial)
-[TinyGPS++](https://github.com/mikalhart/TinyGPSPlus/releases/tag/v1.0.2b)
+- [Sim800-master](https://github.com/cristiansteib/Sim800l)
+- [Wire](https://www.arduino.cc/en/reference/wire)
+- [SoftwareSerial](https://www.arduino.cc/en/Reference/softwareSerial)
+- [TinyGPS++](https://github.com/mikalhart/TinyGPSPlus/releases/tag/v1.0.2b)
