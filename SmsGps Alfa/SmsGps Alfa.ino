@@ -1,39 +1,16 @@
 #include <Wire.h>
 #include<SoftwareSerial.h>
-#include <TinyGPS++.h> // Include the TinyGPS++ library
+#include <TinyGPS++.h> 
 #include <Sim800l.h>
 #define ARDUINO_GPS_RX 5 // GPS TX, Arduino RX pin
 #define ARDUINO_GPS_TX 4 // GPS RX, Arduino TX pin
-#define gpsPort ssGPS  // Alternatively, use Serial1 on the Leonardo
+#define gpsPort ssGPS 
 #define SerialMonitor Serial
 #define GPS_BAUD 9600
 
-SoftwareSerial ssGPS(ARDUINO_GPS_TX, ARDUINO_GPS_RX); // Create a SoftwareSerial
-TinyGPSPlus tinyGPS; // Create a TinyGPSPlus object
+SoftwareSerial ssGPS(ARDUINO_GPS_TX, ARDUINO_GPS_RX); 
+TinyGPSPlus tinyGPS; 
 Sim800l Sim800l;
-
-
-
-/*
-sim800l 
-tx >>> 10
-rx >>> 9
-reset >>> 7
-vcc >>> 4.7v
-
-gps
-rx >>> 5
-tx >>> 4
-vcc >>> 5v
-
-
-
-
-*/
-
-
-
-
 
 
 float lat, lon, vel;
