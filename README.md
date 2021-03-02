@@ -14,6 +14,7 @@
 | Off     |  desliga porta digita 2   |
 | Reset   |   Reinicia Tudo           |
 
+![](https://github.com/Jonathan-A-Soares/RastreadorGprsPorSms/blob/main/exemplo/smss.png?raw=true"heinght="150"width="150")
 ## Pinagem
 
 ### Sim800L
