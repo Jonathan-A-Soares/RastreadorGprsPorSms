@@ -5,7 +5,7 @@
 - **Sim800 Gprs Gsm Sim800l**
 > ### Foi necesario modificar a blibioteca Sim800-master.
 
-* Projeto Conclui em Mandar Sms para numero Do modulo sim800l, E modulo Retorna Sms Com localidade do veiculo Em Latitude Longitude.
+* Projeto Conclui em Mandar Sms para numero Do modulo sim800l, E modulo Retorna Sms Com localidade do veiculo Em Latitude Longitude e Link para mapa.
 ## Comandos
 | Comando | Ação                      |
 |---------|---------------------------|
