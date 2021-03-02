@@ -1,3 +1,8 @@
+/*
+* Author : https : //github.com/Jonathan-A-Soares
+* 20:57
+* 01/03/2021
+*/
 #include <Wire.h>
 #include <SoftwareSerial.h>
 #include <TinyGPS++.h>
@@ -20,6 +25,7 @@ char *number, text;
 bool error, msgg, link, loca;
 int estate;
 int dell = 0;
+int hor, minn, seg;
 
 void setup()
 {
@@ -91,7 +97,7 @@ void ResSms()
         link = Sim800l.sendLinkSms(number, lattt, lottt);
         //         error = Sim800l.sendSms(number, lattt ); //latitude
         //         error = Sim800l.sendSms(number, lottt ); //longitude
-        loca = Sim800l.sendLocationSms(number, lattt, lottt);
+        loca = Sim800l.sendLocationSms(number, lattt, lottt, hor, minn, seg);
       }
       else if (textSms.indexOf("ON") != -1)
       {
@@ -143,6 +149,10 @@ void printInfo()
   if (tinyGPS.time.second() < 10)
     SerialMonitor.print('0');
   SerialMonitor.println(tinyGPS.time.second());
+
+  hor = tinyGPS.time.hour();
+  minn = tinyGPS.time.minute();
+  seg = tinyGPS.time.second();
 
   //==================================================================================
 }

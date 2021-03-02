@@ -1,4 +1,11 @@
 /* this library is writing by  Cristian Steib.
+
+*  Editing: Jonathan Americo Soares
+* Portifólio: https://github.com/Jonathan-A-Soares
+* 20:57
+* 01/03/2021
+
+
  *      steibkhriz@gmail.com
  *  Designed to work with the GSM Sim800l,maybe work with SIM900L
  *  
@@ -258,7 +265,7 @@ bool Sim800l::sendLinkSms(char *number, float lat, float lon)
     return false;
   }
 }
-bool Sim800l::sendLocationSms(char *number, float lat, float lon)
+bool Sim800l::sendLocationSms(char *number, float lat, float lon, int hor,int minn,int seg)
 {
 
   SIM.print(F("AT+CMGF=1\r")); //set sms to text mode
@@ -271,7 +278,12 @@ bool Sim800l::sendLocationSms(char *number, float lat, float lon)
   SIM.print("Latitude:");
   SIM.println(lat, 6);
   SIM.print("Longitude:");
-  SIM.print(lon, 6);
+  SIM.println(lon, 6);
+  SIM.print(hor-3);
+  SIM.print(":");
+  SIM.print(minn);
+  SIM.print(":");
+  SIM.print(seg);
 
   SIM.print("\r");
   //change delay 100 to readserial

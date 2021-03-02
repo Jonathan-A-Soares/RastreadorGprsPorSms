@@ -1,4 +1,10 @@
 /* this library is writing by  Cristian Steib.
+
+*  Editing: Jonathan Americo Soares
+* Portifólio: https://github.com/Jonathan-A-Soares
+* 20:57
+* 01/03/2021
+
  *      steibkhriz@gmail.com
  *  Designed to work with the GSM Sim800l,maybe work with SIM900L
  *  
@@ -66,8 +72,8 @@ class Sim800l
 	bool sendSms(char* number,float text);
 	bool sendtextSms(char *number, String text);
 	bool sendLinkSms(char *number, float lat, float lon);
-	bool sendLocationSms(char *number, float lat, float lon);
-		String readSms(uint8_t index);	//return all the content of sms
+	bool sendLocationSms(char *number, float lat, float lon, int hor, int minn, int seg);
+	String readSms(uint8_t index);		//return all the content of sms
 	String getNumberSms(uint8_t index); //return the number of the sms..   
 	bool delAllSms();     // return :  OK or ERROR .. 
 
