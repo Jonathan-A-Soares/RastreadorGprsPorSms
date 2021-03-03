@@ -37,6 +37,7 @@ __Atenção o modulo Gprs (Sim800l) tem que ser Alimentado com ou mais de 3.7v �
 
 #### Blibioteca Modificada 
 - [Sim800-master](https://github.com/Jonathan-A-Soares/RastreadorGprsPorSms/blob/main/Sim800l-master.zip)
+- __Atenção so funciona com a blibioteca modificada__
 #### Blibioteca Originais
 - [Sim800-master](https://github.com/cristiansteib/Sim800l)
 - [Wire](https://www.arduino.cc/en/reference/wire)
