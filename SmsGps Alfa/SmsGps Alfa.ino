@@ -1,7 +1,7 @@
 /*
-* Author : https : //github.com/Jonathan-A-Soares
-* 20:57
-* 01/03/2021
+  Author : https : //github.com/Jonathan-A-Soares
+  20:57
+  02/03/2021
 */
 #include <Wire.h>
 #include <SoftwareSerial.h>
@@ -40,13 +40,9 @@ void setup()
   text = "oi";
 
   Sim800l.begin();
-  Serial.print("Limpando SMS antigos...");
-  if (dell >= 0)
-  {
-    error = Sim800l.delAllSms();
-    dell = 10;
-  } //Apaga SMS
-  Serial.println(" Apagados!");
+  // Serial.print("Limpando SMS antigos...");
+  // error = Sim800l.delAllSms();
+  //Serial.println(" Apagados!");
   Serial.println("\nAguardando comandos por SMS...");
   number = "35000000000";
   pinMode(2, OUTPUT);
@@ -54,7 +50,6 @@ void setup()
 
 void loop()
 {
-
   printInfo();
   smartDelay(1000);
   ResSms();
