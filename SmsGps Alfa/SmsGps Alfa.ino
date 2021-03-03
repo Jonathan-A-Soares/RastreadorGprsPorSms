@@ -108,7 +108,6 @@ void ResSms()
         msgg = Sim800l.sendtextSms(number, "Desligado");
         estate = 0;
       }
-
       Sim800l.delAllSms();
     }
   }
